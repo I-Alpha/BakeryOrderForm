@@ -311,10 +311,7 @@
         p {}
 
         div.h3, div.h4 {
-            display: flex;
             text-align: center;
-            justify-content: center;
-            align-items: center;
             width:100%;
         }
 
@@ -363,8 +360,7 @@
 
             #main_col_2 {
                 align-items: space-between;
-                justify-content: stretch;     
-                 height : 96%;  
+                justify-content: stretch; 
             }
             #main_col_2 > div
             {
@@ -414,12 +410,9 @@
             #cake-image-container>div {
                 min-width: 140px;
                 max-width: 230px;
-                padding: 10px;
+                padding: 2px;
             }
             div.h3 { 
-                
-            justify-content: start;
-            align-items: center;
                 display: flex;
                 left:20px;
                 text-align: start;
@@ -428,7 +421,7 @@
             #main_col_2 {
                 align-items: space-around;
                 justify-content:space-around; 
-           
+                height : 100%;
             }
 
         }
@@ -437,12 +430,10 @@
 
         /* Extra large devices (large desktops, 1200px and up) */
         @media (min-width: 1200px) {
-
-             
             #main_col_2 {
                 width : 100%; 
-                align-items: space-between;
-                justify-content:space-between; 
+                align-items: space-around;
+                justify-content:space-around; 
             
             }
             #main_col_1 {
@@ -456,19 +447,17 @@
                 width : 100%; 
                 align-items: space-around;
                 justify-content:space-around; 
-                margin:0; 
+                margin:0;
+                padding:0;
+                top:-27px;
             }
 
             .h4 {
-                margin-bottom: -15px;
+                margin-bottom: -5px;
             }
 
             .h3.w-100.row{ 
                 padding: 0 0 0 24px;
-            }
-
-            #submitgroup{
-                top : -15px;
             }
         }
     </style>
@@ -627,7 +616,7 @@
                         <input id="tc_Check" type="checkbox" class="input mx-2 pb-0">I accept the terms and conditions
                     </label>
                 </div>
-                <div id="submitgroup" class="btn-group justify-content-center align-items-center d-flex d-flex w-100"  >
+                <div class="btn-group justify-content-center align-items-center d-flex d-flex w-100" style="margin-:-15px;" >
                     <button class="btn mx-1 mt-1 col-12 col-sm-6 col-md-6 col-lg-6"
                         style="background-color:rgb(214, 210, 210); z-index: 1; left:0; line-height:1.2rem; color: var(--primary-colour);">Got
                         a discount

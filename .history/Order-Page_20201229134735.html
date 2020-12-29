@@ -311,10 +311,7 @@
         p {}
 
         div.h3, div.h4 {
-            display: flex;
             text-align: center;
-            justify-content: center;
-            align-items: center;
             width:100%;
         }
 
@@ -363,11 +360,11 @@
 
             #main_col_2 {
                 align-items: space-between;
-                justify-content: stretch;     
-                 height : 96%;  
+                justify-content: stretch; 
             }
             #main_col_2 > div
             {
+                max-height: vh;
             }
             
             .container-fluid {}
@@ -417,9 +414,6 @@
                 padding: 10px;
             }
             div.h3 { 
-                
-            justify-content: start;
-            align-items: center;
                 display: flex;
                 left:20px;
                 text-align: start;
@@ -428,7 +422,7 @@
             #main_col_2 {
                 align-items: space-around;
                 justify-content:space-around; 
-           
+                height : 100%; 
             }
 
         }
@@ -441,8 +435,8 @@
              
             #main_col_2 {
                 width : 100%; 
-                align-items: space-between;
-                justify-content:space-between; 
+                align-items: space-around;
+                justify-content:space-around; 
             
             }
             #main_col_1 {
@@ -468,7 +462,7 @@
             }
 
             #submitgroup{
-                top : -15px;
+                top : -25px;
             }
         }
     </style>
