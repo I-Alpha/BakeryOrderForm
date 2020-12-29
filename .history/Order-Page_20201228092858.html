@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+    <style>
+        :root {
+            --primary-font: 1.6rem;
+            --cake-font-size: 1.4rem;
+            --secondary-font: 1rem;
+            --primary-colour: #430a69ff;
+            --secondary-colour: #a186b1ff;
+            --text-faded:#c3b5ce; 
+        }
+
+        * {
+            border: 1px solid black;
+            border-radius: 10px; 
+        }
+
+        html,
+        body,
+        .container-fluid {
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            
+        }
+
+   
+        #sec2-label{
+            color: var(--text-faded);
+            font-size: 1.7rem;
+        }
+
+        .purple_font {
+            color: #430a69ff;
+        }
+
+        .light_purple_font {
+            color: #a186b1ff;
+        }
+
+        .textfaded{            
+            color: var(--text-faded);
+        }
+
+        .buttergold {
+            background-color: #da9b0eff
+        }
+
+        .input-group {}
+
+        .pull-up {
+            top: -50%;
+        }
+
+        .split-row-1 {
+            height: 100%;
+        }
+
+        .split-row-2 {
+            height: 50%;
+        }
+
+        #main_col_1 * {
+        }
+
+        #main_col_1 {
+            margin-top: 5px;
+            margin-bottom:  5px;
+        }
+
+        #main_col_2 * {
+        }
+
+        #main_col_2 {
+            background-color: rgb(240, 240, 240);
+        }
+ 
+        #main_col_1 .input-group,
+        #main_col_2 .input-group {
+        
+        }
+
+        .col-8,
+        .col-4 {}
+
+        #deliveryBtn:active {
+            background-color: white;
+            color: var(--primary-colour);
+        }
+        #collectionBtn:active {
+            background-color: var(--primary-colour);
+            color: white;
+        } 
+        #cake-image-container p:nth-child(2) {
+            background-color: #da9b10; 
+            font-size: var(--cake-font-size);
+            color:white; 
+            margin-top:-1px;
+            border-top-left-radius: 0;
+             border-top-right-radius: 0;
+        }
+        #cake-image-container div {
+            max-width: 250px;
+            font-size: var(--secondary-font);  
+            border-radius: 15px 15px 15px 15px;  
+        }
+        #cake-image-container div *{
+            margin-top:0;
+            margin-bottom:0;
+        }       
+        #cake-image-container div img {
+             border-bottom-left-radius: 0;
+             border-bottom-right-radius: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+            
+        }
+ 
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid mt-3" style="height: 100%">
+        <div class="row d-flex">
+            <div id="main_col_1" class=" col-12 col-sm-8 col-md-8 purple_font py-1 justify-content-center align-items-center ">
+                <h1>You create, we bake...</h1>
+                <div id="cake-image-container" class="d-flex col col col-3 col-3 justify-content-between align-items-center text-center px-0">
+                    <div class="col-6 col-sm-3 col-md-3 col-lg-3 px-0 ">
+                        <img src="Assets\baked-yellow-cake.jpg" class="img-fluid" alt="Responsive image">
+                        <p>Trailblazer</p>
+                        <p>Vanilla honey filled with chocolate ganache</p>
+                    </div>
+                    <div class="col-6  col-sm-3 col-md-3 col-lg-3 px-0">
+                        <img src="Assets\baked-yellow-cake.jpg" class="img-fluid" alt="Responsive image">
+                        <p>Silent Champ</p>
+                        <p>Vanilla honey filled with chocolate ganache</p>
+                    </div>
+                    <div class="col-6 col-sm-3 col-md-3 col-lg-3 px-0">
+                        <img src="Assets\baked-yellow-cake.jpg" class="img-fluid" alt="Responsive image">
+                        <p>New Kid</p>
+                        <p>Vanilla honey filled with chocolate ganache</p>
+                    </div>
+                    <div class="col-6 col-sm-3 col-md-3 col-lg-3 px-0">
+                        <img src="Assets\baked-yellow-cake.jpg" class="img-fluid" alt="Responsive image">
+                        <p>Quirky</p>
+                        <p>Vanilla honey filled with chocolate ganache</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 text-center d-flex flex-column">
+                    <div id="sec2-label" class="py-4">Choose a cake from above, or start from scratch</div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="row input-group">
+                                <p>select up to 3 flavours</p>
+                                <textarea></textarea>
+                            </div>
+                            <div class="row input-group">
+                                <p>ICING</p>
+                                <input class="input w-100">
+                            </div>
+                            <div class="row input-group">
+                                <p>FILING</p>
+                                <input class="input w-100">
+                            </div>
+                            <div class="row input-group">
+                                <p>add some toppings</p>
+                                <textarea></textarea>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="col input-group d-flex  align-items-center ">
+                                <input class="input" placeholder="Shape">
+                                <input class="input" placeholder="Type">
+                                <p>approx. 54 servings</p>
+                            </div>
+                            <label> What's the colour scheme?
+                                <input class="input w-100">
+                            </label>
+                            <label>For someone special? Let the icing say it...
+                                <input class="input w-100">
+                            </label>
+                            <p>WHAT'S YOUR INSPIRATION?</p>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Corrupti pariatur odio adipisci iure consectetur laboriosam quisquam maiores
+                                accusamus soluta repudiandae?</p>
+                            <div class="col">
+                                <img src="..." class="img-fluid" alt="Responsive image">
+                                <p>UPLOAD</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="main_col_2" class="col-6 col-sm-4 col-md-4 d-flex flex-column align-items-center">
+                <p class="row">Your Details</p>
+                <div class="input-group">
+                    <input class="col" placeholder="Full Name">
+                </div>
+                <div class="input-group">
+                    <input class="col" placeholder="Email Address">
+                </div>
+                <div class="input-group">
+                    <input class="col-3 " placeholder="Code"><input class="col-9" placeholder="Phone Number">
+                </div>
+                <div class="input-group">
+                    <input class="col-4" placeholder="House No"><input class="col-8" placeholder="Street">
+                </div>
+                <div class="input-group">
+                    <input class="col-3" placeholder="City">
+                    <input class="col-3" placeholder="Postcode">
+                    <input class="col-6" placeholder="Country">
+                </div>
+                <div class="w-50  p-0 btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn align-content-center py-0 active" style="border-right: 1px solid black;">
+                        <input id="deliveryBtn" class="btn" type="checkbox" name="options" autocomplete="off" checked>
+                        Delivery
+                    </label>
+                    <label class="btn align-content-center py-0  ">
+                        <input class="btn" id="collectionBtn" type="checkbox" name="options" autocomplete="off">
+                        Collection
+                    </label>
+                </div>
+                <div class="input-group">
+                    <input class="col" placeholder="Full Name">
+                </div>
+                <div class="input-group">
+                    <input class="col-3" placeholder="Code"><input class="col-9" placeholder="Phone Number">
+                </div>
+                <div class="input-group">
+                    <input class="col-4" placeholder="House No"><input class="col-8" placeholder="Street">
+                </div>
+                <div class="input-group">
+                    <input class="col" placeholder="District">
+                </div>
+                <div class="input-group">
+                    <input class="col-8" placeholder="Date"><input class="col-4" placeholder="Time">
+                </div>
+                <div class="input-group">
+                    <p>Anything else we should know?</p>
+                    <textarea class="input-fluid w-100 "></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="tc_Check">
+                        <input id="tc_Check" type="checkbox" class="input">I accept the terms and conditions</input>
+                    </label>
+                </div>
+                <div class="row input-group justify-content-center ">
+                    <button>Got a discount code?</button>
+                    <button>Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

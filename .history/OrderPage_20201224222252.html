@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+    <style>
+        * {
+            border: 1px solid black;
+        }
+
+        html,
+        body,
+        .container-fluid {
+            height: auto;
+            width: 100%;
+        }
+
+        .pull-up {
+            top: -50%;
+        }
+
+        .split-row-1 {
+            height: 100%;
+        }
+
+        .split-row-2 {
+            height: 50%;
+        }
+
+        .col {
+            border-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid d-flex" style="height: 100vh; background-color: rgba(255,0,0,0.1);">
+        <div class="col w-50">
+            <div class="row h-50">
+                <div class="col h-40 d-flex justify-content-center align-items-center">
+                    <div class="row h-40">d</div>
+                </div>
+                <div class="col h-40 d-flex justify-content-center align-items-center">
+                    <div class="row h-40">d</div>
+                </div>
+                <div class="col h-40 d-flex justify-content-center align-items-center">
+                    <div class="row h-40">d</div>
+                </div>
+                <div class="col h-40 d-flex justify-content-center align-items-center">
+                    <div class="row h-40">d</div>
+                </div>
+            </div>
+            <div class="row h-50">
+                <div class="col">
+                    <div class="row h-20">d</div>
+                    
+                    <div class="row h-20">d</div>
+                    
+                    <div class="row h-20">d</div>
+                    
+                </div>
+                <div class="col">q</div>
+            </div>
+        </div>
+        <div class="col-fluid w-50 h-100 d-flex flex-column"> </div>
+    </div>
+</body>
+
+</html>

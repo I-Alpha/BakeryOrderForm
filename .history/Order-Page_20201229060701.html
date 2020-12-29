@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+    <style>
+        :root {
+            --primary-font: 1.6rem;
+            --cake-font-size: 1.4rem;
+            --secondary-font: 1rem;
+            --primary-colour: #430a69ff;
+            --secondary-colour: #a186b1ff;
+            --text-faded: #c3b5ce;
+            --background-faded: rgb(240, 240, 240);
+        }
+
+        * {
+            border: 1px solid rgba(0, 0, 0, 0.002);
+            border-radius: 7px;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 1rem;
+        }
+
+        html,
+        body,
+        .container-fluid {
+            width: 100%;
+            background-color: white;
+         
+        }
+
+        body span.switcher {
+            position: relative;
+            width: 200px;
+            border-radius: 25px;
+        }
+
+        body span.switcher input {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            position: relative;
+            width: 200px;
+            height: 30px;
+            border-radius: 25px;
+        }
+
+        body span.switcher input:before,
+        body span.switcher input:after {
+            z-index: 2;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #FFFFFF;
+        }
+
+        body span.switcher input:before {
+            content: "Delivery";
+            left: 20px;
+        }
+
+        body span.switcher input:after {
+            content: "Collection";
+            right: 20px;
+        }
+
+        body span.switcher label {
+            z-index: 1;
+            position: absolute;
+            top: 1px; 
+            height: 95%;
+            border-radius: 20px;
+        }
+
+        body span.switcher.switcher-1 input {
+            transition: 0.25s -0.1s;
+          
+        }
+
+        body span.switcher.switcher-1 input:checked {
+           
+            background-color: var(--primary-colour);
+        }
+
+        body span.switcher.switcher-1 input:checked:before {
+            color: var(--primary-colour);
+            transition: color 0.5s 0.2s; 
+        }
+
+        body span.switcher.switcher-1 input:checked:after {
+            color: #CCCCCC;
+            transition: color 0.5s;
+        }
+
+        body span.switcher.switcher-1 input:checked+label {
+            left: 0;
+            top: 1px; 
+            right: 100px;
+            background:  white;
+            transition: left 0.5s, right 0.4s 0.2s; 
+        }
+
+        body span.switcher.switcher-1 input:not(:checked) {
+            background:  var(--primary-colour);
+            transition: background 0.5s -0.1s;
+        }
+
+        body span.switcher.switcher-1 input:not(:checked):before {
+            color: #CCCCCC;
+            transition: color 0.5s;
+        }
+
+        body span.switcher.switcher-1 input:not(:checked):after {
+            color:  var(--primary-colour);
+            transition: color 0.5s 0.2s;
+        }
+
+        body span.switcher.switcher-1 input:not(:checked)+label {
+            left: 100px;
+            right: 0px;
+            top:1px;
+            background-color:white;
+            height:95%;
+            transition: left 0.4s 0.2s, right 0.5s, background 0.35s -0.1s;
+        }
+
+
+        #sec2-label {
+            color: var(--text-faded);
+            font-size: 1.5rem;
+
+        }
+
+        .purple_font {
+            color: #430a69ff;
+        }
+
+        .light_purple_font {
+            color: #a186b1ff;
+        }
+
+        .light_purple_background {
+            background-color: #a186b1ff;
+        }
+
+
+        .purple_background {
+            background-color: #430a69ff;
+        }
+
+        .textfaded {
+            color: var(--text-faded);
+        }
+
+        .background_faded {
+            background-color: var(--background-faded);
+        }
+
+        .buttergold {
+            background-color: #da9b0eff
+        }
+
+        .input-group {}
+
+        .pull-up {
+            top: -50%;
+        }
+
+        .split-row-1 {
+            height: 100%;
+        }
+
+        .split-row-2 {
+            height: 50%;
+        }
+
+        #main_col_1 * {}
+
+        #main_col_1 {
+            
+        }
+
+        #main_col_2 * {}
+
+        #main_col_2 {
+            background-color: rgb(240, 240, 240);
+            height: auto;
+            justify-content: center;
+            padding: 5px 5px;
+            color:var(--primary-colour);
+
+        }
+
+        #main_col_2 div.input-group {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        #main_col_2 input {
+            border: 1px solid var(--primary-colour);
+        }
+
+
+        #main_col_1 .input-group,
+        #main_col_2 .input-group {
+
+            color:var(--primary-colour);
+        }
+
+        .col-8,
+        .col-4 {}
+
+        #deliveryBtn.active {
+            background-color: var(--primary-colour);
+            color: var(--primary-colour);
+        }
+
+        #collectionBtn.active {
+            background-color: var(--primary-colour);
+            color: var(--primary-colour);
+        }
+
+        #collectionBtn,
+        #deliveryBtn {
+            border-radius: 30px;
+            border: 1px solid var(--primary-colour);
+            display: inline-block;
+
+        }
+
+        #collectionBtn {}
+
+        #deliveryBtn {}
+
+
+        #deliveryBtn {
+            background-color: white;
+        }
+
+        #collectionBtn {
+            background-color: white;
+            border: 1px solid var(--primary-colour);
+        }
+
+
+
+        #cake-image-container p:nth-child(2) {
+            background-color: #da9b10;
+            color: white;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+
+        #cake-image-container {
+            padding: 0;
+            margin: 0;
+        }
+
+        div#cake-image-container p:nth-child(3) {
+            color: var(--secondary-colour);
+        }
+
+        #cake-image-container>div {
+            font-size: var(--secondary-font);
+            border-radius: 15px 15px 15px 15px;
+            min-height: 100px;
+            min-width: 140px;
+        }
+
+        .left-curve {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .right-curve {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        #cake-image-container div * {}
+
+        #cake-image-container div img {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            min-height: 120px;
+        }
+
+        #cake-image-container p {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        p {}
+
+        div.h3 {
+            text-align: center;
+        }
+
+        .input-group {
+            display: flex;
+        }
+
+        /* Extra small devices (portrait phones, less than 576px)
+         No media query since this is the default in Bootstrap */
+
+        /* Small devices (landscape phones, 576px and up) */
+        @media (min-width: 576px) {
+            html {}
+
+            #main_col_1 {
+                justify-content: space-around;
+                align-items: space-around;
+                padding: 15px;
+            }
+
+            #main_col_2 {
+                padding: 15px;
+                max-width: 89%;
+            }
+
+            div.h3 {
+                width: 100%;
+                text-align: start;
+            }
+
+
+            #cake-image-container>div {
+                width: 150px;
+                font-size: var(--secondary-font);
+                border-radius: 15px 15px 15px 15px;
+                min-height: 300px;
+                padding: 20px 15px 10px 15px;
+
+            }
+        }
+
+        /* Medium devices (tablets, 768px and up) */
+        @media (min-width: 768px) {
+
+            .container-fluid{
+                max-height:100vh;
+                
+            }
+            #main_col_1 {
+                min-height: 100vh;
+                justify-content: center;
+                align-items: center;
+            }
+            #main_col_2 {
+                min-height: 70%; 
+                max-height
+                padding-bottom: -10px;
+            }
+
+            html {}
+
+            body {
+                align-items: center;
+                justify-content: center;
+                padding: 10px 10px 0 0px;
+            }
+
+            #cake-image-container p:nth-child(2) {
+                background-color: #da9b10;
+                font-size: var(--cake-font-size);
+                color: white;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+            }
+
+            div.h3 {
+                text-align: none;
+                margin-top: -10px;
+                padding-top: 0px;
+            }
+        }
+
+        /* Large devices (desktops, 992px and up) */
+        @media (min-width: 992px) {
+            #cake-image-container>div {
+                min-width: 140px;
+                padding: 2px;
+            }
+ 
+
+            #main_col_2 {
+                height: 100%;
+                align-items: space-around;
+                justify-content: space-around;
+                            }
+        }
+
+
+
+        /* Extra large devices (large desktops, 1200px and up) */
+        @media (min-width: 1200px) {}
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid d-flex  ">
+        <div class="row justify-content-center align-items-start ">
+            <div id="main_col_1"
+                class=" d-flex flex-column col-12 col-sm-12 col-md-12 col-lg-8 purple_font py-1 justify-content-around align-items-center ">
+                <div class="h3 w-100 px-3">You create, we bake...</div>
+                <div id="cake-image-container"
+                    class="row d-flex justify-content-between text-center container-fluid px-0">
+                    <div class="d-flex flex-column col-6 col-sm-6 col-md-3 col-lg-3 ">
+                        <img src="Assets\baked-yellow-cake.jpg" class="img-fluid" alt="Responsive image">
+                        <p>Trailblazer</p>
+                        <p>Vanilla honey filled with chocolate ganache</p>
+                    </div>
+                    <div class="d-flex flex-column col-6 col-sm-6 col-md-3 col-lg-3">
+                        <img src="Assets\baked-yellow-cake.jpg" class="img-fluid" alt="Responsive image">
+                        <p class="">Silent Champ</p>
+                        <p>Vanilla honey filled with chocolate ganache</p>
+                    </div>
+                    <div class="d-flex flex-column col-6 col-sm-6 col-md-3 col-lg-3">
+                        <img src="Assets\baked-yellow-cake.jpg" class="img-fluid" alt="Responsive image">
+                        <p>New Kid</p>
+                        <p>Vanilla honey filled with chocolate ganache</p>
+                    </div>
+                    <div class="d-flex flex-column col-6 col-sm-6 col-md-3 col-lg-3">
+                        <img src="Assets\baked-yellow-cake.jpg" class="img-fluid" alt="Responsive image">
+                        <p>Quirky</p>
+                        <p>Vanilla honey filled with chocolate ganache</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 flex flex-column justify-content-center align-items-center"
+                    style="justify-content:center;">
+                    <div id="sec2-label" class="py-4 text-center">Choose a cake from above, or start from scratch</div>
+                    <div class="row">
+                        <div
+                            class="col-12 col-sm-12 col-md-6 justify-content-center d-flex flex-column align-items-center">
+                            <div class="row d-flex flex-column input-group background_faded px-2 ">
+                                <p class="mb-2 mt-2 text-center">select up to 3 flavours</p>
+                                <textarea class="w-100 light_purple_background"></textarea>
+                            </div>
+                            <p class="mb-1 mt-3">ICING</p>
+                            <div class="row input-group px-2" style="justify-content:center;">
+                                <input class="input col-6 w-100 purple_background text-center left-curve"
+                                    style="color:white;" value="Type"><input
+                                    class="input col-6 w-100 light_purple_background text-center right-curve"
+                                    style="color:var(--primary-colour);" value="Flavour">
+                            </div>
+                            <p class="mb-1 mt-3">FILING</p>
+                            <div class="row input-group px-2" style="justify-content:center;">
+                                <input class="input col-6 w-100 purple_background text-center left-curve"
+                                    style="color:white;" value="Type"><input
+                                    class="input col-6 w-100 light_purple_background text-center right-curve"
+                                    style="color:var(--primary-colour);" value="Flavour">
+                            </div>
+                            <div
+                                class="row d-flex flex-column input-group background_faded align-items-center pb-3 px-2">
+                                <p class="mb-1 mt-3">add some toppings</p>
+                                <textarea class="w-100 light_purple_background"></textarea>
+                            </div>
+                        </div>
+                        <div class="col d-flex flex-column justify-content-between align-items-around">
+                            <div class="row-lg-1 input-group d-flex align-items-start justify-content-center border my-0 w-100 pt-2 px-2"
+                                style="height:auto">
+                                <input class="input w-100 border col-3" placeholder="Shape">
+                                <input class="input w-100 col-3 " placeholder="Type">
+                                <label
+                                    class="col-6 p-0 text-center d-flex w-100 justify-content-center align-items-center">approx.
+                                    54 servings</label>
+                            </div>
+                            <div class="input-group justify-content-center row-lg-3 background_faded px-2">
+                                <label class="text-center w-100"> What's the colour scheme?
+                                    <input class="input w-100 light_purple_background">
+                                </label>
+                            </div>
+                            <div class="input-group w-100 justify-content-center align-items-around row-lg-3">
+                                <label class="text-center w-100 ">For someone special? Let the icing say it...
+                                    <input class="input w-100 background_faded">
+                                </label>
+                            </div>
+                            <div class="input-group row-lg-5 d-flex flex-column align-items-center border py-2 px-2">
+                                <p class="row-lg-1 ">WHAT'S YOUR INSPIRATION?</p>
+                                <div class="row-lg-11 input-group d-flex">
+                                    <p class="col-7">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        Corrupti pariatur odio adipisci iure consectetur laboriosam quisquam maiores
+                                        accusamus soluta repudiandae?</p>
+                                    <label class="col-5 d-flex justify-content-center flex-column align-items-center">
+                                        <i class="row fas fa-file-upload" style="font-size: 6rem;"></i>
+                                        <button style="background:white" class="row mt-2">UPLOAD</button>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="main_col_2"
+                class="col-12 col-sm-12 col-md-12 col-lg-4 d-flex flex-column align-items-center justify-content-around">
+                <div class="h4 w-100 px-3">Your Details</div>
+                <div class="input-group">
+                    <input class="col " placeholder="Full Name">
+                </div>
+                <div class="input-group">
+                    <input class="col" placeholder="Email Address">
+                </div>
+                <div class="input-group">
+                    <input class="col-3 left-curve" placeholder="Code"><input class="col-9 right-curve"
+                        placeholder="Phone Number">
+                </div>
+                <div class="input-group">
+                    <input class="col-4 left-curve" placeholder="House No"><input class="col-8 right-curve"
+                        placeholder="Street">
+                </div>
+                <div class="input-group">
+                    <input class="col-3 left-curve" placeholder="City">
+                    <input class="col-3" style="border-radius: 0%;" placeholder="Postcode">
+                    <input class="col-6 right-curve" placeholder="Country">
+                </div>
+                <div class="input-group d-flex justify-content-center align-items-center">
+                    <span class="switcher switcher-1 d-flex">
+                        <input type="checkbox" id="switcher-1" class="justify-content-center align-items-center">
+                        <label for="switcher-1" class=" p-0"></label>
+                    </span>
+                </div>
+                <div class="input-group">
+                    <input class="col" placeholder="Full Name">
+                </div>
+                <div class="input-group">
+                    <input class="col-3 left-curve" placeholder="Code"><input class="col-9 right-curve"
+                        placeholder="Phone Number">
+                </div>
+                <div class="input-group">
+                    <input class="col-4 left-curve" placeholder="House No"><input class="col-8 right-curve"
+                        placeholder="Street">
+                </div>
+                <div class="input-group">
+                    <input class="col" placeholder="District">
+                </div>
+                <div class="input-group">
+                    <input class="col-8 left-curve" placeholder="Date"><input class="col-4 right-curve"
+                        placeholder="Time">
+                </div>
+                <div class="input-group">
+                    <p class=" mb-0 pl-2">Anything else we should know?</p>
+                    <textarea class="input-fluid w-100 "></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="tc_Check">
+                        <input id="tc_Check" type="checkbox" class="input mx-2 pb-0">I accept the terms and conditions
+                    </label>
+                </div>
+                <div class="row input-group btn-group justify-content-around pb-0 mb-0 d-flex w-100">
+                    <button class="btn mx-5"  style="background-color:lightgray; z-index: 1; left:0; line-height:1.2rem;">Got a discount code?</button>
+                    <button class ="btn purple_background mr-1" style="color:white; border-radius:10px; z-index: 1"><i class="fas fa-shopping-basket pr-2"></i>Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+  
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+    <style>
+        :root {
+            --primary-font: 1.6rem;
+            --cake-font-size: 1.4rem;
+            --secondary-font: 1rem;
+            --primary-colour: #430a69ff;
+            --secondary-colour: #a186b1ff;
+            --text-faded:#c3b5ce; 
+            --background-faded:rgb(240, 240, 240);
+        }
+
+        * {
+            border: 1px solid rgba(0, 0, 0, 0.002);
+            border-radius: 10px; 
+            box-sizing: border-box;
+            margin:0;
+            padding: 0;
+        }
+
+        html,
+        body,
+        .container-fluid {
+            width: 100%; 
+            background-color: white;
+            
+        }
+
+   
+        #sec2-label{
+            color: var(--text-faded);
+            font-size: 1.7rem;
+
+        }
+
+        .purple_font {
+            color: #430a69ff;
+        }
+
+        .light_purple_font {
+            color: #a186b1ff;
+        }
+
+        .light_purple_background {
+           background-color: #a186b1ff;
+        }
+
+        
+        .purple_background{
+            background-color: #430a69ff;
+        }
+
+        .textfaded{            
+            color: var(--text-faded);
+        }
+        
+        .background_faded{            
+            background-color: var(--background-faded);
+        }
+        .buttergold {
+            background-color: #da9b0eff
+        }
+
+        .input-group {}
+
+        .pull-up {
+            top: -50%;
+        }
+
+        .split-row-1 {
+            height: 100%;
+        }
+
+        .split-row-2 {
+            height: 50%;
+        }
+
+        #main_col_1 * {
+        }
+
+        #main_col_1 { 
+        }
+
+        #main_col_2 * {
+           border:1px solid var(--primary-colour);
+        }
+
+        #main_col_2 {
+            background-color: rgb(240, 240, 240); 
+            height: auto;
+            justify-content: center;
+        }
+
+        #main_col_2 div.input-group { 
+            padding-top: 5px;
+            padding-bottom: 5px;
+            
+
+        }
+ 
+        #main_col_1 .input-group,
+        #main_col_2 .input-group {
+        }
+
+        .col-8,
+        .col-4 {}
+
+        #deliveryBtn:active {
+            background-color: white;
+            color: var(--primary-colour);
+        }
+
+        #collectionBtn:active {
+            background-color: var(--primary-colour);
+            color: white;
+        }
+
+        #cake-image-container p:nth-child(2) {
+            background-color: #da9b10; 
+            font-size: var(--cake-font-size);
+            color:white;  
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+        
+        div#cake-image-container p:nth-child(3){
+ 
+            color: var(--secondary-colour);
+            }
+
+        #cake-image-container > div  {
+            width:150px; 
+            font-size: var(--secondary-font);  
+            border-radius: 15px 15px 15px 15px;  
+            height: 300px;
+             padding: 20px 15px 10px 15px;  
+    
+        }
+
+        #cake-image-container div *{
+           
+        }       
+
+        #cake-image-container div img {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            height:160px
+           
+        }
+
+        #cake-image-container p{
+            display: flex;
+            min-height: 20px;
+            text-align: center;
+            justify-content: center;
+            align-items:center;
+        }
+
+        p{ 
+        
+        }
+
+        h1{ 
+        }
+
+        .input-group{ display: flex;}
+
+
+ 
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid d-flex p-5" >
+        <div class="row ">
+            <div id="main_col_1" class=" d-flex flex-column col-12 col-sm-12 col-md-12 col-lg-8 purple_font py-1 justify-content-center align-items-center ">
+                <h1 class="h1 w-100 px-3">You create, we bake...</h1>
+                <div id="cake-image-container" class="row d-flex justify-content-between text-center container-fluid px-0">
+                    <div class="d-flex flex-column col-6 col-sm-6 col-md-3 col-lg-3 ">
+                        <img src="Assets\baked-yellow-cake.jpg" class="img-fluid" alt="Responsive image">
+                        <p>Trailblazer</p>
+                        <p>Vanilla honey filled with chocolate ganache</p>
+                    </div>
+                    <div class="d-flex flex-column col-6 col-sm-6 col-md-3 col-lg-3">
+                        <img src="Assets\baked-yellow-cake.jpg" class="img-fluid" alt="Responsive image">
+                        <p class="">Silent Champ</p>
+                        <p>Vanilla honey filled with chocolate ganache</p>
+                    </div>
+                    <div class="d-flex flex-column col-6 col-sm-6 col-md-3 col-lg-3">
+                        <img src="Assets\baked-yellow-cake.jpg" class="img-fluid" alt="Responsive image">
+                        <p>New Kid</p>
+                        <p>Vanilla honey filled with chocolate ganache</p>
+                    </div>
+                    <div class="d-flex flex-column col-6 col-sm-6 col-md-3 col-lg-3">
+                        <img src="Assets\baked-yellow-cake.jpg" class="img-fluid" alt="Responsive image">
+                        <p>Quirky</p>
+                        <p>Vanilla honey filled with chocolate ganache</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 flex flex-column justify-content-center align-items-center" style="justify-content:center;">
+                    <div id="sec2-label" class="py-4 text-center">Choose a cake from above, or start from scratch</div>
+                    <div class="row">
+                        <div class="col justify-content-center d-flex flex-column align-items-center">
+                            <div class="row d-flex flex-column input-group " >
+                                <p class="text-center" >select up to 3 flavours</p>
+                                <textarea class="w-100 light_purple_background"></textarea>
+                            </div>
+                            <div class="row input-group " style="justify-content:center;" >
+                                <p></p>ICING</p>
+                                <input class="input col-6 w-100 purple_background"><input class="input w-100 light_purple_background">
+                            </div>
+                            <div class="row input-group "  style="justify-content:center;">
+                                <p>FILING</p>
+                                <input class="input w-100">
+                            </div>
+                            <div class="row d-flex flex-column input-group background_faded align-items-center pb-3 px-3" >
+                                <p class="pt-2">add some toppings</p>
+                                <textarea class="w-100 light_purple_background"></textarea>
+                            </div>
+                        </div>
+                        <div class="col d-flex flex-column justify-content-around ">
+                            <div class="row input-group d-flex align-items-center ">
+                                <input class="input col-3" placeholder="Shape">
+                                <input class="input col-3" placeholder="Type">
+                                <p class="col-6">approx. 54 servings</p>
+                            </div>
+                            <div  class="input-group  row">
+                            <label  > What's the colour scheme?
+                                <input class="input w-100">
+                            </label>
+                            </div>
+                            <div  class="input-group   row">
+                            <label>For someone special? Let the icing say it...
+                                <input class="input w-100">
+                            </label>
+                            </div>
+                            <div  class="input-group row d-flex"> 
+                            <p class>WHAT'S YOUR INSPIRATION?</p>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Corrupti pariatur odio adipisci iure consectetur laboriosam quisquam maiores
+                                accusamus soluta repudiandae?</p>
+                            </div>                
+                            <div  class="input-group   row"> 
+                                <img src="..." class="img-fluid" alt="Responsive image">
+                                <p>UPLOAD</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="main_col_2" class="col-12 col-sm-12 col-md-12 col-lg-4 d-flex flex-column align-items-center justify-content-around">
+                <p class="row">Your Details</p>
+                <div class="input-group">
+                    <input class="col" placeholder="Full Name">
+                </div>
+                <div class="input-group">
+                    <input class="col" placeholder="Email Address">
+                </div>
+                <div class="input-group">
+                    <input class="col-3 " placeholder="Code"><input class="col-9" placeholder="Phone Number">
+                </div>
+                <div class="input-group">
+                    <input class="col-4" placeholder="House No"><input class="col-8" placeholder="Street">
+                </div>
+                <div class="input-group">
+                    <input class="col-3" placeholder="City">
+                    <input class="col-3" placeholder="Postcode">
+                    <input class="col-6" placeholder="Country">
+                </div>
+                <div class="w-50  p-0 btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn align-content-center py-0 active" style="border-right: 1px solid black;">
+                        <input id="deliveryBtn" class="btn" type="checkbox" name="options" autocomplete="off" checked>
+                        Delivery
+                    </label>
+                    <label class="btn align-content-center py-0  ">
+                        <input class="btn" id="collectionBtn" type="checkbox" name="options" autocomplete="off">
+                        Collection
+                    </label>
+                </div>
+                <div class="input-group">
+                    <input class="col" placeholder="Full Name">
+                </div>
+                <div class="input-group">
+                    <input class="col-3" placeholder="Code"><input class="col-9" placeholder="Phone Number">
+                </div>
+                <div class="input-group">
+                    <input class="col-4" placeholder="House No"><input class="col-8" placeholder="Street">
+                </div>
+                <div class="input-group">
+                    <input class="col" placeholder="District">
+                </div>
+                <div class="input-group">
+                    <input class="col-8" placeholder="Date"><input class="col-4" placeholder="Time">
+                </div>
+                <div class="input-group">
+                    <p class=" mb-0">Anything else we should know?</p>
+                    <textarea class="input-fluid   w-100 "></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="tc_Check">
+                        <input id="tc_Check" type="checkbox" class="input">I accept the terms and conditions</input>
+                    </label>
+                </div>
+                <div class="row input-group justify-content-center ">
+                    <button>Got a discount code?</button>
+                    <button>Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

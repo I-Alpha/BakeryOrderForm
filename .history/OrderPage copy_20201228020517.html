@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+    <style>
+        * {
+            border: 1px solid black;
+            border-radius:5px; 
+            padding:1px;
+        }
+
+        html,
+        body,
+        .container-fluid {
+            height: 100vh;
+            width: 100%;
+            overflow-y: hidden;
+            background-color : white; 
+        }
+
+        .purple_font{
+            color:#430a69ff ;
+        }
+         
+        .light_purple_font{
+            color:#a186b1ff ;
+        }
+
+        .buttergold{
+            background-color:#da9b0eff
+        }
+       .input-group{ padding: 5px 2px;}
+
+        .pull-up {
+            top: -50%;
+        }
+
+        .split-row-1 {
+            height: 100%;
+        }
+
+        .split-row-2 {
+            height: 50%;
+        }
+
+        #main_col_1{
+            color:#430a69ff;
+        }
+        #main_col_2{
+             color:#430a69ff;
+        }
+      .col-8,.col-4{
+          height:100%
+          }
+
+      div{padding:1px 1px;}
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid overflow-hidden d-flex align-items-center w-100 h-100"
+        style="height: 100vh;">
+        <div id="main_col_1" class="col-8 d-flex flex-column h-100 ">
+                     <p>You create, we bake</p>
+                   <div class="row">
+                    <div class="col  h-100">
+                                <img src="..." class="img-fluid" alt="Responsive image">
+                                <p>dfasd</p>
+                                <p>dfasd</p>
+                    </div>
+                    <div class="col  h-100">
+                        <img src="..." class="img-fluid" alt="Responsive image">
+                        <p>dfasd</p>
+                        <p>dfasd</p>
+                  </div>
+                  <div class="col  h-100">
+                    <img src="..." class="img-fluid" alt="Responsive image">
+                    <p>dfasd</p>
+                    <p>dfasd</p>
+                 </div> 
+                 <div class="col  h-100">
+                    <img src="..." class="img-fluid" alt="Responsive image">
+                    <p>dfasd</p>
+                    <p>dfasd</p>
+                  </div>
+                </div>               
+            <div class="col h-75">
+                    <p>Choose a cake from above, or start from scratch</p>
+                <div class="col col" >
+                        <div class="row">
+                           <p>select up to 3 flavours</p>
+                            <p>ICING</p>                         
+                            <p>FILING</p>
+                            <p>add some toppings</p><textarea></textarea>
+                        </div>
+                       <div class="row">
+                            <input class="col-4 " placeholder="Shape">
+                            <input class="col-4" placeholder="Type">
+                            <div class="p col-4">approx. 54 servings</div>
+                            <label> What's the colour scheme?
+                                    <input class="input w-100">
+                            </label>
+                            <label>For someone special? Let the icing say it...
+                                    <input class="input w-100">
+                            </label>
+                                <div class="p">WHAT'S YOUR INSPIRATION?</div>
+                                <div class="d-flex">
+                                    <div class="col-7">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        Corrupti pariatur odio adipisci iure consectetur laboriosam quisquam maiores
+                                        accusamus soluta repudiandae?</div>
+                                    <div class="col-5 d-flex flex-column align-items-center justify-content-center">
+                                        <img src="..." class="img-fluid" alt="Responsive image">
+                                        <p>UPLOAD</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main_col_2" class="col-4 d-flex flex-column h-100 align-items-center">
+            <p class="row">Your Details</p>
+            <div class="row input-group">
+                <input class="col" placeholder="Full Name">
+            </div>
+            <div class="row input-group">
+                <input class="col" placeholder="Email Address">
+            </div>
+            <div class="row input-group">
+                <input class="col-3 " placeholder="Code"><input class="col-9" placeholder="Phone Number">
+            </div>
+            <div class="row input-group">
+                <input class="col-4" placeholder="House No"><input class="col-8" placeholder="Street">
+            </div>
+            <div class="row input-group">
+                <input class="col-3" placeholder="City">
+                <input class="col-3" placeholder="Postcode">
+                <input class="col-6" placeholder="Country">
+            </div>
+            <div class="row w-50 btn-group btn-group-toggle input-group justify-content-center align-items-center"
+                data-toggle="buttons">
+                <label class="btn  btn-primary active">
+                    <input type="checkbox" name="options" autocomplete="off" checked>
+                    Delivery
+                </label>
+                <label class="btn tn-primary ">
+                    <input type="checkbox" name="options" autocomplete="off">
+                    Collection
+                </label>
+            </div>
+            <div class="row input-group">
+                <input class="col" placeholder="Full Name">
+            </div>
+            <div class="row input-group">
+                <input class="col-3" placeholder="Code"><input class="col-9" placeholder="Phone Number">
+            </div>
+            <div class="row input-group">
+                <input class="col-4" placeholder="House No"><input class="col-8" placeholder="Street">
+            </div>
+            <div class="row input-group">
+                <input class="col" placeholder="District">
+            </div>
+            <div class="row input-group">
+                <input class="col-8" placeholder="Date"><input class="col-4" placeholder="Time">
+            </div>
+            <div class="row d-flex  input-group">
+                <p class="p">Anything else we should know?</p>
+                <textarea class="input-fluid w-100 "></textarea>
+            </div>
+            <div class="row input-group">
+                <label for="tc_Check">
+                    <input id="tc_Check" type="checkbox" class="input">I accept the terms and conditions</input>
+                </label>
+            </div>
+            <div class="row input-group d-flex">
+                <button>Got a discount code?</button>
+                <button>Order</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

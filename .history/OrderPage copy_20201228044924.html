@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+    <style>
+
+            :root{
+                --primary-font:1.6rem;
+                --secondary-font:1rem;
+                --primary-colour: #430a69ff;
+                --secondary-colour:#a186b1ff; 
+            }
+            * {
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 1px;
+        }
+
+        html,
+        body,
+        .container-fluid {
+            width: 100%;
+            background-color: white;
+        }
+
+        .purple_font {
+            color: #430a69ff;
+        }
+
+        .light_purple_font {
+            color: #a186b1ff;
+        }
+
+        .buttergold {
+            background-color: #da9b0eff
+        }
+
+        .input-group {
+            padding: 5px 2px;
+        }
+
+        .pull-up {
+            top: -50%;
+        }
+
+        .split-row-1 {
+            height: 100%;
+        }
+
+        .split-row-2 {
+            height: 50%;
+        }
+
+        #main_col_1 *{
+            color: var(--primary-colour);
+        }
+        #main_col_1 {
+            margin-top :5px;
+            margin-bottom :10px;
+        }
+
+        #main_col_2 * {
+            color: var(--primary-colour);
+        }
+        #main_col_2 {
+            background-color: rgb(240, 240, 240);
+           padding-top:10px;
+        }
+
+        html body div.container-fluid div.row div#main_col_1.col-12.col-sm-8.col-md-8.py-4.justify-content-center.align-items-center div.row.text-center div.col.h-100{}
+        
+
+        #main_col_1 .input-group,#main_col_2 .input-group{
+                    margin-top :5px;
+                    margin-bottom :10px;
+            }
+
+        .col-8,
+        .col-4 { 
+        }
+
+        img{
+           height : 400px;
+           width : 200px;
+        }
+
+        #deliveryBtn:active{
+            background-color: white;
+            color:var(--primary-colour);
+        }       
+        #collectionBtn:active{
+            background-color: var(--primary-colour);
+            color:white;
+            padding: 1px 1px;
+        }
+        html body div.container-fluid div.row div#main_col_1.col-12.col-sm-8.col-md-8.py-4.justify-content-center.align-items-center div.row.text-center div.col.h-100 p:nth-child(2){
+            background-color: #da9b10; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid" style="height: 100%">
+        <div class= "row">
+            <div id="main_col_1" class="col-12 col-sm-8 col-md-8 py-4 justify-content-center align-items-center ">
+                <p class= "py-2">You create, we bake...</p>
+                <div class="row text-center">
+                    <div class="col h-100">
+                        <img src="Assets\baked-yellow-cake.jpg" class="img-fluid" alt="Responsive image">
+                        <p>Trailblazer</p>
+                        <p>Vanilla honey filled with chocolate ganache</p>
+                    </div>
+                    <div class="col  h-100">
+                        <img src="Assets\baked-yellow-cake.jpg" class="img-fluid" alt="Responsive image">
+                        <p>Silent Champ</p>
+                        <p>Vanilla honey filled with chocolate ganache</p>
+                    </div>
+                    <div class="col  h-100">
+                        <img src="Assets\baked-yellow-cake.jpg" class="img-fluid" alt="Responsive image">
+                        <p>New Kid</p>
+                        <p>Vanilla honey filled with chocolate ganache</p>
+                    </div>
+                    <div class="col  h-100">
+                        <img src="Assets\baked-yellow-cake.jpg" class="img-fluid" alt="Responsive image">
+                        <p>Quirky</p>
+                        <p>Vanilla honey filled with chocolate ganache</p>
+                    </div>
+                </div>
+                <div class="col text-center">
+                    <p class="py-4">Choose a cake from above, or start from scratch</p>
+                    <div class="row">
+                        <div class="col">
+                            <div class="input-group">
+                            <p>select up to 3 flavours</p>
+                            <textarea></textarea>
+                            </div>
+                            <div class="input-group">
+                            <p>ICING</p>
+                            <input class="input w-100">
+                            </div>
+                            <div class="input-group">
+                            <p>FILING</p>
+                            <input class="input w-100">
+                            </div>
+                            <div class="input-group">
+                            <p>add some toppings</p>
+                            <textarea></textarea>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="col col col input-group">
+                            <input class="" placeholder="Shape">
+                            <input class="" placeholder="Type">
+                            <p>approx. 54 servings</p>
+                            </div>
+                            <label> What's the colour scheme?
+                                <input class="input w-100">
+                            </label>
+                            <label>For someone special? Let the icing say it...
+                                <input class="input w-100">
+                            </label>
+                            <p>WHAT'S YOUR INSPIRATION?</p>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Corrupti pariatur odio adipisci iure consectetur laboriosam quisquam maiores
+                                accusamus soluta repudiandae?</p>
+                            <div class="col">
+                                <img src="..." class="img-fluid" alt="Responsive image">
+                                <p>UPLOAD</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="main_col_2" class="col-12 col-sm-4 col-md-4 d-flex flex-column align-items-center">
+                <p class="row">Your Details</p>
+                <div class="input-group">
+                    <input class="col" placeholder="Full Name">
+                </div>
+                <div class="input-group">
+                    <input class="col" placeholder="Email Address">
+                </div>
+                <div class="input-group">
+                    <input class="col-3 " placeholder="Code"><input class="col-9" placeholder="Phone Number">
+                </div>
+                <div class="input-group">
+                    <input class="col-4" placeholder="House No"><input class="col-8" placeholder="Street">
+                </div>
+                <div class="input-group">
+                    <input class="col-3" placeholder="City">
+                    <input class="col-3" placeholder="Postcode">
+                    <input class="col-6" placeholder="Country">
+                </div>
+                <div class="w-50  p-0 btn-group btn-group-toggle"  data-toggle="buttons">
+                    <label class="btn align-content-center py-0 active" style="border-right: 1px solid black;">
+                        <input id = "deliveryBtn" class="btn" type="checkbox" name="options" autocomplete="off" checked>
+                        Delivery
+                    </label>
+                    <label class="btn align-content-center py-0  ">
+                        <input class="btn"  id = "collectionBtn" type="checkbox" name="options" autocomplete="off">
+                        Collection
+                    </label>
+                </div>
+                <div class="input-group">
+                    <input class="col" placeholder="Full Name">
+                </div>
+                <div class="input-group">
+                    <input class="col-3" placeholder="Code"><input class="col-9" placeholder="Phone Number">
+                </div>
+                <div class="input-group">
+                    <input class="col-4" placeholder="House No"><input class="col-8" placeholder="Street">
+                </div>
+                <div class="input-group">
+                    <input class="col" placeholder="District">
+                </div>
+                <div class="input-group">
+                    <input class="col-8" placeholder="Date"><input class="col-4" placeholder="Time">
+                </div>
+                <div class="input-group">
+                    <p>Anything else we should know?</p>
+                    <textarea class="input-fluid w-100 "></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="tc_Check">
+                        <input id="tc_Check" type="checkbox" class="input">I accept the terms and conditions</input>
+                    </label>
+                </div>
+                <div class="col input-group justify-content">
+                    <button>Got a discount code?</button>
+                    <button>Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
